@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/my_item_height"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp" >
+
+    <TextView
+        android:id="@+id/exception_project_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/xuexiao"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/my_account"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/my_item_text_size" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/exception_count_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/xcrount_red_15"
+        android:layout_centerVertical="true"
+        android:text="23"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_item_text_size" >
+    </TextView>
+
+</RelativeLayout>

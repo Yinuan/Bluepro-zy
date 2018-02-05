@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="45dp"
+    android:id="@+id/admin_decive_layout"
+    android:background="@color/white"
+    android:paddingLeft="13dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="10dp" >
+
+    <ImageView
+        android:id="@+id/bluetooth_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bluetooth_icon" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="5dp" >
+        
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/my_item_text_size" >
+        </TextView>
+        
+        <TextView
+            android:id="@+id/mac_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            android:textSize="12sp" >
+        </TextView>
+        
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/water_btn"
+        android:layout_width="46dp"
+        android:layout_height="30dp"
+        android:text="@string/water_test"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/test_water_btn_selecter"
+        android:textColor="@color/white"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/my_item_text_size" >
+    </Button>
+    
+    <Button
+        android:id="@+id/bind_btn"
+        android:layout_width="46dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dialog_btn2_selecter"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_item_text_size" >
+    </Button>
+
+</LinearLayout>

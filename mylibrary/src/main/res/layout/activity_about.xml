@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_menu_style"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:orientation="vertical"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:src="@drawable/logo" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/my_app_name_txt"
+                android:layout_marginTop="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="16sp">
+            </TextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/copyright_layout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/copyright"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <ImageView
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_item_next" >
+        </ImageView>
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:id="@+id/disclaimer_layout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/disclaimer"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <ImageView
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_item_next" >
+        </ImageView>
+        </RelativeLayout>
+        
+        
+
+        
+    </LinearLayout>
+
+    
+</LinearLayout>

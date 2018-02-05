@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+   <include layout="@layout/top_menu_style"/>
+
+    <include layout="@layout/item_rent_recording_list"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/edit_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/txt_one"
+            android:text="取消原因"
+            />
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/rent_recording_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:maxLength="120"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/guzhang_edit_style"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:hint="请输入内容"
+            android:maxLines="4"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" >
+        </EditText>
+    </LinearLayout>
+    <Button
+        android:id="@+id/rent_return_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/dialog_btn2_selecter"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>  

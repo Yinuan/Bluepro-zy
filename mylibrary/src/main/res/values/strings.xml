@@ -1,3 +1,329 @@
 <resources>
-    <string name="app_name">My Library</string>
+
+    <string name="app_name">趣智校园</string>
+    <string name="binding">绑定手机号</string>
+    <string name="back">返回</string>
+    <string name="hint_login">请输入手机号码</string>
+    <string name="hint_check_code">请输入验证码</string>
+    <string name="send_phone_identifying_code">获取验证码</string>
+    <string name="phonenum_null">请填写手机号码 </string>
+    <string name="phonenum_not_irregular">您填写的手机号码不合规则！ </string>
+
+    <string name="checkcode_error">请检查您的验证码是否输入正确！ </string>
+
+    <string name="tab_admin">首页</string>
+    <string name="tab_usewater">首页</string>
+    <string name="tab_bill">钱包</string>
+    <string name="tab_my">我的</string>
+
+    <string name="login">登录</string>
+    <string name="lijitiyan">立即体验</string>
+    <string name="xizao">公寓洗澡</string>
+    <string name="kaishui">澡堂/饮水</string>
+    <string name="bluetooth_state_disconnect">蓝牙未开启</string>
+    <string name="bluetooth_bind">绑定水表</string>
+
+    <!-- <string name="bluetooth_binded">已绑定水表</string> -->
+
+    <string name="water_start">开始用水</string>
+    <string name="water_stop">结束用水</string>
+
+    <string name="start_brathe">开始洗澡</string>
+    <string name="stop_brathe">结束洗澡</string>
+
+    <string name="xizao_start">点击开始</string>
+    <string name="xizao_end">点击结束</string>
+    <string name="retry">点击重试</string>
+    <string name="has_link_device">已连接</string>
+    <string name="no_content_bluetooth">未连接到水表？</string>
+    <string name="no_content_bluetooth2">未连接到开水器？</string>
+    <string name="no_content_bluetooth3">未连接到设备？</string>
+    <string name="xizao_finish">账单详细</string>
+    <string name="water_finish">打水完成！</string>
+    <string name="yongshui_finish">用水完成！</string>
+    <string name="finish_time">结束时间：</string>
+    <string name="withhold_amount">预扣金额：</string>
+    <string name="washing_model">洗衣模式：</string>
+    <string name="consume_amount">消费金额：</string>
+    <string name="return_amount">返回金额：</string>
+    <string name="tips">提示</string>
+    <string name="tips_bluetooth_disconnect">请先开启蓝牙</string>
+
+    <string name="no_bind_accout">请先绑定设备后再修改人员信息</string>
+
+    <string name="tips_bluetooth_bind">是否确定绑定该水表？</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="settings">设置</string>
+    <string name="ok">好</string>
+    <string name="commint">提交</string>
+    <string name="my">我</string>
+    <string name="my_center">个人中心</string>
+    <string name="admin_center">管理中心</string>
+    <string name="message_center">消息中心</string>
+    <string name="consume_detail">消费详情</string>
+    <string name="yongshui_detail">消费详情</string>
+    <string name="yongshui_detail2">用水详情</string>
+    <string name="my_quzhi">我</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_bill">我的账单</string>
+    <string name="my_repair">故障报修</string>
+    <string name="my_admin">我的管理中心</string>
+    <string name="my_operation">操作指引</string>
+    <string name="my_suggestion">意见反馈</string>
+    <string name="my_about">关于</string>
+    <string name="my_version">当前版本</string>
+    <string name="version_number_is_wrong">没有获取到当前版本！</string>
+    <string name="suggestion_tips">我们虚心接受您的意见和建议！</string>
+    <string name="suggestion_hint">请输入您的宝贵意见！</string>
+    <string name="repair_tips">感谢您的支持，请选择故障现象！</string>
+    <string name="repair_empty">请详情描述故障问题！</string>
+    <string name="repair_reason_empty">请选择故障现象！</string>
+    <string name="repair_room_empty">请输入故障的房间号！</string>
+
+    <string name="repair_seccess">故障报修成功！</string>
+
+    <string name="suggestion_seccess">您的意见已经反馈成功！</string>
+    <string name="consume_menu">  设备状态已结束,消费账单请前往我的账单查看</string>
+    <string name="all_bill">全部</string>
+    <string name="consume_bill">消费</string>
+    <string name="recharge_bill">充值</string>
+    <string name="repair_reason1">蓝牙连不上</string>
+    <string name="repair_reason2">不出热水</string>
+    <string name="repair_reason3">灯不亮</string>
+    <string name="room_number">房间号</string>
+    <string name="repair_hint">故障详情描述：</string>
+    <string name="my_info">个人信息</string>
+    <string name="my_account">账户</string>
+    <string name="my_school">学校</string>
+    <string name="my_room_number">房间号</string>
+    <string name="logout">退出登录</string>
+    <string name="save">保存</string>
+
+    <string name="name">姓名</string>
+    <string name="hint_name">请输入您的姓名</string>
+
+    <string name="hint_sex">请选择性别</string>
+    <string name="sex">性别</string>
+    <string name="IDcard">身份证号</string>
+    <string name="hint_IDcard">请输入身份证号</string>
+    <string name="user_peopleid_error">请输入正确的身份证号码</string>
+    <string name="about">关于我们</string>
+    <string name="input_tips1">请输入图片验证码</string>
+    <string name="copyright">版权申明</string>
+    <string name="disclaimer">免责声明</string>
+    <string name="service_call">服务电话</string>
+    <string name="scan_qrcode">扫描二维码</string>
+    <string name="scan_device_qrcode">扫描设备上二维码登记</string>
+    <string name="search_device">搜索水表</string>
+    <string name="start_searching">开始搜索</string>
+    <string name="stop_searching">停止搜索</string>
+    <string name="bluetooth_search">蓝牙搜索</string>
+    <string name="bluetooth_search1">打开蓝牙搜索</string>
+    <string name="no_shuibiao">找不到水表？</string>
+    <string name="no_shuibiao1">找不到设备？</string>
+    <string name="search_number_device">已搜索%1$d台水表</string>
+    <string name="search_number_device3">已搜索%1$d台洗衣机</string>
+    <string name="search_number_device2">已搜索%1$d台设备</string>
+    <string name="select_device_title">请选择设备</string>
+    <string name="device_list">设备列表</string>
+    <string name="look_device">查看设备列表</string>
+    <string name="close">关闭</string>
+    <string name="bind">绑定</string>
+    <string name="register">登记</string>
+    <string name="update">更改</string>
+    <string name="new_device">新设备</string>
+    <string name="account_balance">基本账号余额</string>
+    <string name="case_balance">现金余额</string>
+    <string name="yuan">(元)</string>
+    <string name="yuan1">元</string>
+    <string name="account_give">赠送账号余额</string>
+    <string name="account_give_tips">赠送余额,长期有效,不可退</string>
+    <string name="recharge_way">充值方式</string>
+    <string name="recharge_count">充值金额</string>
+    <string name="recharge_tips">活动说明：充%1$d元送%2$d元</string>
+    <string name="pay_zhifubao">支付宝</string>
+    <string name="pay_weixin">微信</string>
+    <string name="pay_now">立即充值</string>
+    <string name="connecting_device">设备连接中···</string>
+    <string name="connected_device">设备已连接</string>
+    <string name="unanble_connect_device">无法连接设备</string>
+    <string name="no_select_package">请您选择要缴费的套餐！</string>
+    <string name="device_register">设备登记</string>
+    <string name="mac">MAC:</string>
+    <string name="project_name">项目名称:</string>
+    <string name="select_project_name">请选择项目</string>
+    <string name="device_name">设备名称</string>
+    <string name="device_category">设备类型</string>
+    <string name="select_device_category">请选择设备类型</string>
+    <string name="device_name1">设备名称</string>
+    <string name="select_area">选择区域</string>
+    <string name="select_area2">请选择区域</string>
+    <string name="select_building">选择楼栋</string>
+    <string name="select_building2">请选择楼栋</string>
+    <string name="select_floor">选择楼层:</string>
+    <string name="select_floor2">请选择楼层</string>
+    <string name="select_room">房间号:</string>
+    <string name="select_room2">请选择房间</string>
+    <string name="sure_device_register">确认并登记</string>
+    <string name="my_project">我的项目（%1$d个）</string>
+    <string name="financial_management">财务管理</string>
+    <string name="device_exception">设备异常</string>
+    <string name="exception_detail">故障详情</string>
+    <string name="shuibiao_num">水表数</string>
+    <string name="account_num">有效账户</string>
+    <string name="recharge_num">充值统计</string>
+    <string name="consume_num">消费统计</string>
+    <string name="replace_device">更换水表</string>
+    <string name="room">房间号</string>
+    <string name="yukou">预扣金额</string>
+    <string name="loading">正在处理...</string>
+    <string name="select_project_first">请先选择项目名称</string>
+    <string name="select_category_first">请先选择设备类型</string>
+    <string name="select_area_first">请先选择区域</string>
+    <string name="select_ld_first">请先选择楼栋</string>
+    <string name="select_lc_first">请先选择楼层</string>
+    <string name="select_fj_first">请先选择房间号</string>
+
+    <string name="project_category1">蓝牙水表</string>
+    <string name="project_category2">开水器</string>
+    <string name="project_category3">水表</string>
+    <string name="get_data_fail">查询数据失败</string>
+    <string name="get_data_fail2">没有查询到数据</string>
+    <string name="register_device_name_same">设备名称已存在！</string>
+    <string name="bluetooth_callback_success">蓝牙返回数据成功</string>
+    <string name="bluetooth_callback_fail">蓝牙返回数据失败</string>
+    <string name="interrupt_tips">该设备正在使用中，是否结束?</string>
+    <string name="no_interrupt_tips">设备正在刷卡消费，请更换其他设备</string>
+    <string name="interrupt_tips2">该开水器正在使用中，请确认是否中断？</string>
+    <string name="interrupt_tips3">该设备正在使用中，请确认是否中断？</string>
+
+    <string name="save_idcard">请先认证身份证！</string>
+    <string name="bind_tips2">请先绑定设备后再进行操作！</string>
+    <string name="caiji_tips">当前设备没有采集数据，是否采集数据，然后继续使用？</string>
+    <string name="stop_tips">确定结束当前使用？</string>
+    <string name="yuebuzu_tips">余额不足,请充值!</string>
+    <string name="yuebuzu_tip2">您的余额不足,请联系管理员进行充值</string>
+    <string name="other_finish">洗澡状态已结束，消费账单请前往个人中心查看！</string>
+    <string name="other_finish1">洗澡状态已结束！</string>
+    <string name="error_downrate1">使用出错，再试试吧！</string>
+    <string name="error_downrate2">使用出错，再试试吧！</string>
+
+    <string name="error_downrate3">正在刷卡消费！</string>
+    <string name="i_known">我知道了</string>
+
+    <string name="charge">去充值</string>
+    <string name="other_is_useing_device">该设备已被别人正在使用。不用处理！</string>
+    <string name="what_is_yukou">什么是预扣金额？</string>
+    <string name="no_connect">未连接到设备</string>
+    <string name="yukou_tip">什么是预扣金额</string>
+    <string name="yukou_tip1">"      扣费模式"</string>
+    <string name="yukou_tip2">"      趣智校园采用预扣费模式，开始用水时扣除账户相应金额，用水结束立即形成账单，系统自动退回剩余金额。"</string>
+    <string name="yukou_tip3">"      收费方式"</string>
+    <string name="yukou_tip4">"      趣智校园按用水量计费，例：用1升水只收取1升水的钱，点结束用水时计费立即停止，不花冤枉钱。"</string>
+    <string name="no_connect_tips1">"      未开启手机蓝牙"</string>
+    <string name="no_connect_tips2">"      >您可以在\"设置\"中打开蓝牙并开放检测功能"</string>
+    <string name="no_connect_tips3">"      手机距离设备太远"</string>
+    <string name="no_connect_tips4">"      >建议把手机置于距离设备5米左右可搜索范围内"</string>
+    <string name="no_connect_tips5">"      其他用户已连接设备"</string>
+    <string name="no_connect_tips6">"      >告知其他用户断开与设备连接状态"</string>
+    <string name="no_connect_tips7">"      设备故障"</string>
+    <string name="no_connect_tips8">"      >您可进入趣智校园-个人中心-故障报修或通知管理员进行维修"</string>
+    <string name="no_connect_tips9">"      手机存在缓存数据"</string>
+    <string name="no_connect_tips10">"      >取消手机与蓝牙的配对信息并关机重启"</string>
+    <string name="no_connect_tips11">"      更换新设备"</string>
+    <string name="no_connect_tips12">"      >旧设备故障无法连接，已更换新设备后，点击页面的\"更换水表\"，更换到其他设备去"</string>
+    <string name="no_connect_tips13">"      如果还是未能解决，请联系管理员！"</string>
+    <string name="no_network">当前网络不可用，请检查网络设置!</string>
+
+    <string name="bind_tips">是否确定绑定该设备！</string>
+    <string name="bind_fail">绑定账户失败！</string>
+
+    <string name="error_qr">无效的二维码！</string>
+    <string name="error_device_type1">该开水器信息已修改，请重新选择开水器！</string>
+    <string name="error_device_type2">该水表信息已修改，请重新绑定水表！</string>
+
+    <string name="error_device_type3">抱歉，没有查到该类型的设备！</string>
+
+    <string name="error_device_prj">该水表不在本项目中！</string>
+    <string name="error_device_prj2">该开水器不在本项目中！</string>
+    <string name="phone_tips1">确认拨打电话</string>
+    <string name="phone_tips2">吗？</string>
+
+    <string name="start_water">开始用水</string>
+    <string name="stop_water">结束用水</string>
+    <string name="replace_water">更换开水器</string>
+
+    <string name="test_water">测试用水</string>
+
+    <string name="link">连接</string>
+    <string name="other">其他</string>
+
+    <string name="login_shixiao">登录失效或已在别的地方登录！</string>
+
+    <string name="insert_recharge_account">请输入自定义金额</string>
+    <string name="insert_recharge_tip">请输入自定义金额（300-1000元）</string>
+    <string name="insert_recharge_tip2">请输入300-1000元之间的整数</string>
+
+    <string name="zhifubao_pay_seccess">支付成功</string>
+    <string name="zhifubao_pay_failed">支付失败</string>
+    <string name="zhifubao_pay_process">支付确认中</string>
+
+    <string name="check_code_sended">短信验证码已经发送成功！</string>
+    <string name="yanzhengma_error">验证码错误</string>
+    <string name="searching">正在搜索...</string>
+
+    <string name="no_room">暂无</string>
+
+    <string name="device_regeister_fail">设备登记失败！</string>
+    <string name="device_regeister_fail2">设备更改失败！</string>
+    <string name="device_regeister_success">设备登记成功！</string>
+    <string name="device_regeister_success2">设备更改成功！</string>
+
+    <string name="xiafa_success">分配设备信息成功！</string>
+    <string name="xiafa_fail">分配设备信息失败！</string>
+
+    <string name="connect_fail">连接失败，请检查蓝牙或更换设备！</string>
+    <string name="connect_fail2">蓝牙配对失败!</string>
+
+    <string name="no_search_device">未搜索到设备！</string>
+    <string name="search">搜索</string>
+
+    <string name="water_test">试用</string>
+
+    <string name="shuibiao">水表</string>
+    <string name="yue">余额</string>
+    <string name="no_bind">未绑定</string>
+
+    <string name="operation_1">洗澡操作功能</string>
+    <string name="operation_2">洗衣操作功能</string>
+    <string name="operation_3">饮水操作功能</string>
+    <string name="operation_4">吹风机操作功能</string>
+    <string name="operation_5">充电操作功能</string>
+    <string name="operation_6">"其他"操作功能</string>
+
+    <string name="rent4_hint1">&#8194;&#8194;申请已提交,工作人员将进行审核，并在7个工作日内上门安装。请耐心等待，感谢使用</string>
+    <string name="rent4_hint2">&#8194;&#8194;如有问题，请拨打服务电话</string>
+
+    <string name="card_hint1">·月卡生效期间，在购买的次数内选择任何模式洗衣免费(超出次数后正常计费)</string>
+    <string name="card_hint2">·当前若无月卡，购买后月卡立即生效；当前若已有月卡，续费后有效期顺延(1个月按照30天计算)</string>
+    <string name="card_hint3">·购卡/续费成功后，24小时内未使用可进行退款</string>
+    <string name="card_hint4">·退押金后无法继续使用洗衣机，已购买的月卡有效期不变；重新交纳押金后，相应月卡权益立即恢复</string>
+
+    <string name="card_despoit_txt1">交付押金后,即使用该设备;</string>
+    <string name="card_despoit_txt2">押金可原途退还</string>
+    <string name="card_deposit_pull1">押金退还时间为1-3个工作日,在此期间你的</string>
+    <string name="card_deposit_pull2">账号将无法使用该设备,确定退还?</string>
+    <string name="return_card_hint1">月卡退还期间您将无法使用月卡,</string>
+    <string name="return_card_hint2">确定要进行退卡?</string>
+    <string name="return_card_result_error_hint1">退还失败，请稍后重试!</string>
+    <string name="return_card_result_error_hint2">如有问题,请前往服务中心或拨打服务电话</string>
+    <string name="return_card_result_ok_hint1">申请成功,金额将在7个工作日内退还。</string>
+    <string name="return_card_result_ok_hint2">如有问题,请前往服务中心或拨打服务电话</string>
+    <string name="rent_return_hint1">取消申请后,将撤销设备的上门安装，押金可到"我的押金"办理退款。确定要进行取消?</string>
+
+    <string name="xiyi_model_hint1">1.禁止清洗羽绒服等非机洗贵重衣物!</string>
+    <string name="xiyi_model_hint2">2.洗衣前请务必将洗衣机的门盖关闭。</string>
+    <string name="xiyi_model_hint3">3.请勿清洗鞋、袜、内衣等贴身衣物，避免影响他人。</string>
+    <string name="xiyi_model_hint4">4.请确保衣兜内贵重物品已取出。</string>
 </resources>

@@ -1,0 +1,41 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+<!-- 加载对话框动画效果 -->
+    <item
+        android:drawable="@drawable/loading_dialog_0"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_1"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_2"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_3"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_4"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_5"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_6"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_7"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_8"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_9"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_10"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_dialog_11"
+        android:duration="100"/>
+
+</animation-list>

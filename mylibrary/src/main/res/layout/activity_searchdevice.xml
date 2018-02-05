@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include layout="@layout/top_menu_style"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/circle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.28">
+            <TextView
+                android:id="@+id/bluetooth_school_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+              android:layout_centerVertical="true"
+                android:layout_height="match_parent" >
+
+                <com.klcxkj.zqxy.widget.DiffuseView
+                    android:id="@+id/diffuseView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:diffuse_color="@color/base_color"
+                    app:diffuse_coreColor="@color/base_color"
+                    app:diffuse_maxWidth="180"
+                    app:diffuse_width="3" />
+                <!-- app:diffuse_coreRadius="250" diffuse_coreRadius 为中心圆的半径     diffuse_width 设置扩散圆宽度   diffuse_maxWidth 设置最大宽度(值越小宽度越大) -->
+            	<View 
+            	    android:id="@+id/click_empty_view"
+            	    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                     android:layout_centerInParent="true"
+                    android:background="@drawable/search_bg"
+            	    
+            	    />
+            
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/search_state_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_c"
+                android:layout_marginBottom="4dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/base_color"
+                android:textSize="18sp" />
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/view_c"/>
+            <TextView
+                android:id="@+id/searching_device_number_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_state_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/base_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/look_device_txt"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/look_device"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/device_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/edit_bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/select_device_title"
+                        android:textColor="@color/text_color"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/close_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/close"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/device_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

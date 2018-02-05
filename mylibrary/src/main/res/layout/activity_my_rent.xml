@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+   <include layout="@layout/top_menu_style"/>
+    <LinearLayout
+        android:id="@+id/rent_progress_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="80dp"
+        android:background="@color/edit_bg">
+        <ImageView
+            android:id="@+id/rent_progress"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:src="@mipmap/rent_progress_1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="20dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="手机验证"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="15dp"
+                android:textSize="14sp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="信息确认"
+                android:textSize="14sp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="押金交纳"
+                android:textSize="14sp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="申请完成"
+                android:textSize="14sp"
+                android:paddingRight="15dp"
+                android:gravity="center_vertical|right"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/rent_1"/>
+        <include layout="@layout/rent_2"/>
+        <include layout="@layout/rent_3"/>
+        <include layout="@layout/rent_4"/>
+    </FrameLayout>
+</LinearLayout>  

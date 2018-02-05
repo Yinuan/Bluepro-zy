@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/washing1"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing2"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing3"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing4"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing5"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing6"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing7"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing8"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing9"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing10"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing11"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing12"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing13"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/washing14"
+        android:duration="150">
+    </item>
+
+</animation-list>

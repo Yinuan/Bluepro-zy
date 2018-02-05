@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/edit_bg" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/base_color" >
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"
+            android:text="充值"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/account_balance_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/recharge"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/account_balance"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_balance_txt"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:text="@string/case_balance"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/cash_account_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/yuan_txt"
+                        android:text="100"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/yuan_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/yuan"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" >
+                    </TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/account_give_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/recharge"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/account_give"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" >
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_give_txt"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:text="@string/account_give_tips"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/give_account_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/yuan2_txt"
+                        android:text="100"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/yuan2_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/yuan"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" >
+                    </TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/recharge_count"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" >
+            </TextView>
+
+            <com.klcxkj.zqxy.widget.MyGridView
+                android:id="@+id/package_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:padding="15dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" >
+            </com.klcxkj.zqxy.widget.MyGridView>
+
+            <TextView
+                android:id="@+id/package_item_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                android:text="@string/recharge_way"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:visibility="gone"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/zhifu_item_height"
+                        android:drawableLeft="@drawable/weixin"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/pay_weixin"
+                        android:textColor="@color/grey"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_bg" />
+<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/zhifu_item_height"
+                        android:drawableLeft="@drawable/zhifubao"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/pay_zhifubao"
+                        android:textColor="@color/grey"
+                        android:textSize="16dp" />
+                    
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/pay_radio_group"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RadioButton
+                        android:id="@+id/weixin_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/zhifu_item_height"
+                        android:button="@drawable/radiobtn_selector"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_bg" />
+
+                    <RadioButton
+                        android:id="@+id/zhifubao_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/zhifu_item_height"
+                        android:button="@drawable/radiobtn_selector"
+                        android:gravity="center_vertical" />
+                    
+                    
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/recharge_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/recharge_btn_selecter"
+        android:text="@string/pay_now"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

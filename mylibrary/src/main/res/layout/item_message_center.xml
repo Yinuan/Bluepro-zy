@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/edit_bg"
+    >
+    <TextView
+        android:id="@+id/push_msg_time"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="2017/10/10"
+        android:background="#c4c4c4"/>
+
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/message_type_1"
+          android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/message_icon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/message_point" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/message_icon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/txt_two"
+                    android:textSize="16dp"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/message_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/message_title"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/txt_three"
+                    android:textSize="14dp"
+                    android:text=""
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

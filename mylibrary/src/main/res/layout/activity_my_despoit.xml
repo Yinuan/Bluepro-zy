@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top_menu_style"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/deposit_root_layout"
+        android:orientation="vertical">
+
+
+   <RelativeLayout
+       android:id="@+id/deposit_layout"
+       android:layout_width="match_parent"
+       android:paddingLeft="15dp"
+       android:paddingRight="15dp"
+       android:layout_height="100dp">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/txt_one"
+           android:textSize="18sp"
+           android:text="设备"
+           android:layout_alignParentLeft="true"
+           android:layout_centerVertical="true"/>
+       <TextView
+           android:id="@+id/deposit_device_type"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="16sp"
+           android:textColor="@color/txt_two"
+           android:hint="请选择"
+           android:drawablePadding="6dp"
+           android:drawableRight="@drawable/pull_down"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           />
+
+   </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/edit_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_one"
+                    android:textSize="18sp"
+                    android:text="押金"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_two"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="6dp"
+                    android:text="(可退)"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/txt_three"
+                android:text="@string/card_despoit_txt1"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/txt_three"
+                android:text="@string/card_despoit_txt2"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/deposit_count"
+           android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/txt_one"
+            android:text="0.0"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/edit_bg"/>
+    <Button
+        android:id="@+id/deposit_btn"
+        android:layout_marginTop="72dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/login_btn_selecter"
+        android:text="押金充值"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>  

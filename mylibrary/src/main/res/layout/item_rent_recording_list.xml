@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/rent_icon"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/rent_waiting"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/rent_recording_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/rent_recording_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                 android:layout_centerVertical="true"
+                android:textColor="@color/txt_three"
+              />
+
+
+            <TextView
+                android:id="@+id/rent_recording_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+              android:layout_alignParentBottom="true"
+                android:textColor="@color/txt_two"
+                android:text="申请已提交,工作人员将进行审核，并在7个工作日内上门安装。请耐心等待，感谢使用"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/edit_bg"/>
+    <RelativeLayout
+        android:id="@+id/rent_recording_stuta"
+        android:layout_width="match_parent"
+        android:paddingRight="15dp"
+        android:layout_height="45dp">
+        <TextView
+            android:id="@+id/rent_recroding_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="审核中"
+            android:background="@drawable/bianjiziliao_btn"
+            android:textColor="@color/txt_two"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</LinearLayout>

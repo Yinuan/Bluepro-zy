@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:id="@+id/rentlayout_1"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="23dp"
+        android:gravity="center_vertical" >
+
+
+        <EditText
+            android:id="@+id/user_phone_num_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/xcrount_edit_bg_5"
+            android:hint="@string/hint_login"
+            android:inputType="phone"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="#969697"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xcrount_edit_bg_5"
+        android:gravity="center_vertical" >
+
+
+        <EditText
+            android:id="@+id/check_code_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:hint="@string/hint_check_code"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="#969697"
+            android:textSize="16sp" />
+
+        <com.klcxkj.zqxy.widget.TimeButton
+            android:id="@+id/send_phone_identifying_code_btn"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_btn_selecter"
+            android:text="@string/send_phone_identifying_code"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rent1_submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_btn_selecter"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/security_code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a0000000" >
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/xcrount_white_10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/input_tips1"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/securitycode_img"
+                    android:layout_width="0dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <ImageView
+                    android:id="@+id/fresh_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/lightgray"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fresh" />
+            </LinearLayout>
+
+            <com.klcxkj.zqxy.widget.SecurityCodeView
+                android:id="@+id/scv_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

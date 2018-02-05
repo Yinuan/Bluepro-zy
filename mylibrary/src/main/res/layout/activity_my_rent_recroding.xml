@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/edit_bg"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+   <include layout="@layout/top_menu_style"/>
+
+    <ListView
+        android:id="@+id/rent_recroding_list"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:dividerHeight="10dp"
+        android:divider="@color/edit_bg"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>  

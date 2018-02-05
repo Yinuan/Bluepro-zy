@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/edit_bg" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/bill_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:src="@drawable/consume_bill_normal" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/money_txt"
+            android:layout_toRightOf="@+id/bill_icon"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/dealmark_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/deal_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12316"
+                android:textColor="@color/lightgray"
+                android:textSize="12sp" >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/money_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="17dp"
+            android:text="0.5"
+            android:textSize="16sp" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

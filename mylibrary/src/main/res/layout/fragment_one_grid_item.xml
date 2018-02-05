@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/one_xizao"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/one_icon_size"
+                    android:layout_height="@dimen/one_icon_size"
+                    android:src="@mipmap/one_xizao"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="48dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="洗澡"
+                    android:textColor="@color/text_color"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/one_xiyi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/one_icon_size"
+                    android:layout_height="@dimen/one_icon_size"
+                    android:src="@mipmap/one_xiyi"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="48dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="洗衣"
+                    android:textColor="@color/text_color"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/one_yinshui"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/one_icon_size"
+                    android:layout_height="@dimen/one_icon_size"
+                    android:src="@mipmap/one_yinshui"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="48dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="饮水"
+                    android:textColor="@color/text_color"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:id="@+id/one_chuifengji"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/one_icon_size"
+                    android:layout_height="@dimen/one_icon_size"
+                    android:src="@mipmap/one_chuifengji"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="48dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="吹风机"
+                    android:textColor="@color/text_color"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/one_chongdian"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/one_icon_size"
+                    android:layout_height="@dimen/one_icon_size"
+                    android:src="@mipmap/one_chongdian"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="48dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="充电"
+                    android:textColor="@color/text_color"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/one_other"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/one_icon_size"
+                    android:layout_height="@dimen/one_icon_size"
+                    android:src="@mipmap/one_others"/>
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="48dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="其他"
+                    android:textColor="@color/text_color"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

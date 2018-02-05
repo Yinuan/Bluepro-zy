@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/xiyi_package_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/card_pakeage_unchoased"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/model_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/model_standard"/>
+        <TextView
+            android:id="@+id/model_name"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标准洗"
+            android:textSize="18sp"
+            android:textColor="@color/txt_one"/>
+        <TextView
+            android:id="@+id/model_count"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5元/35分钟"
+            android:textSize="16sp"
+            android:textColor="@color/base_color"/>
+        <TextView
+            android:id="@+id/model_ps"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一般日常的洗涤衣物"
+            android:textSize="15sp"
+            android:textColor="@color/txt_three"/>
+    </LinearLayout>
+
+</LinearLayout>

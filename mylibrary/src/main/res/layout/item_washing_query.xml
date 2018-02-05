@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/washing_top_line"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="34dp"
+        android:layout_height="2dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/washing_decive_adresss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="东区-1栋-305"
+            android:textSize="16sp"
+            />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/washing_state_icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/washing_decive_null"/>
+            <TextView
+                android:id="@+id/washing_state_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/base_color"
+                android:text="空闲"
+                android:layout_marginLeft="4dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/washing_yuyue_btn"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/xcrount_red_5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/washing_decive_yuyue"/>
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/base_color"
+            android:textSize="16sp"
+            android:text="预约"/>
+    </LinearLayout>
+</RelativeLayout>
