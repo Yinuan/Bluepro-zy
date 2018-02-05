@@ -202,9 +202,9 @@
     <string name="bind_tips2">请先绑定设备后再进行操作！</string>
     <string name="caiji_tips">当前设备没有采集数据，是否采集数据，然后继续使用？</string>
     <string name="stop_tips">确定结束当前使用？</string>
-    <string name="yuebuzu_tips">余额不足,请充值!</string>
+    <string name="yuebuzu_tips">后勤生活钱包余额不足，请返回首页并点击【后勤生活充值】给后勤生活钱包充值!</string>
     <string name="yuebuzu_tip2">您的余额不足,请联系管理员进行充值</string>
-    <string name="other_finish">洗澡状态已结束，消费账单请前往个人中心查看！</string>
+    <string name="other_finish">洗澡状态已结束，消费账单请前往我的账单查看！</string>
     <string name="other_finish1">洗澡状态已结束！</string>
     <string name="error_downrate1">使用出错，再试试吧！</string>
     <string name="error_downrate2">使用出错，再试试吧！</string>

@@ -21,7 +21,7 @@
         <activity
             android:name="com.klcxkj.zqxy.ui.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <activity
             android:name="com.klcxkj.zqxy.ui.SwitchActivity"
             android:screenOrientation="portrait"

@@ -14,16 +14,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //用户
         findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent();
                 intent.setClass(MainActivity.this, MainUserActivity.class);
-                intent.putExtra("tellPhone","18565651403");
+                intent.putExtra("tellPhone","0078");
                 intent.putExtra("PrjID","0");
                 startActivity(intent);
             }
         });
+        //操作员
         findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
