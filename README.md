@@ -27,4 +27,5 @@
                 startActivity(intent);
           另外清单文件，需要添加的额外。
    Eclispe  
+   	![](https://github.com/Yinuan/Bluepro-zy/blob/master/mylibrary/src/main/res/mipmap-hdpi/go_home.png)
 
