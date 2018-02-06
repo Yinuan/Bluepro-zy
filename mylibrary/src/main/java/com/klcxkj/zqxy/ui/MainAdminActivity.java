@@ -23,7 +23,6 @@ import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.zqxy.common.Common;
 import com.klcxkj.zqxy.databean.UserInfo;
 import com.klcxkj.zqxy.fragment.AdminFragment;
-import com.klcxkj.zqxy.fragment.MyAdminFrgment;
 import com.klcxkj.zqxy.response.PublicGetData;
 import com.klcxkj.zqxy.utils.GlobalTools;
 import com.klcxkj.zqxy.widget.LoadingDialogProgress;
@@ -44,10 +43,10 @@ public class MainAdminActivity extends FragmentActivity {
 	private LayoutInflater layoutInflater;
 
 	// 定义数组来存放Fragment界面
-	private Class fragmentArray[] = { AdminFragment.class, MyAdminFrgment.class };
+	private Class fragmentArray[] = { AdminFragment.class };
 
 	// 定义数组来存放按钮图片
-	private int mImageViewArray[] = { R.drawable.tab_home_btn, R.drawable.tab_my_btn };
+	private int mImageViewArray[] = { R.drawable.tab_home_btn};
 
 	// Tab选项卡的文字
 	private int mTextviewArray[] = { R.string.tab_admin,  R.string.tab_my };
@@ -164,7 +163,7 @@ public class MainAdminActivity extends FragmentActivity {
 
 		TextView textView = (TextView) view.findViewById(R.id.textview);
 		textView.setText(mTextviewArray[index]);
-
+		view.setVisibility(View.GONE);
 		return view;
 	}
 
@@ -180,7 +179,7 @@ public class MainAdminActivity extends FragmentActivity {
 				return;
 			}
 
-			loadingDialogProgress = GlobalTools.getInstance().showDailog(MainAdminActivity.this,"登录中.");
+			loadingDialogProgress = GlobalTools.getInstance().showDailog(MainAdminActivity.this,"登入中.");
 			sp = getSharedPreferences("adminInfo", Context.MODE_PRIVATE);
 			AjaxParams ajaxParams = new AjaxParams();
 			ajaxParams.put("TelPhone", phonenum);

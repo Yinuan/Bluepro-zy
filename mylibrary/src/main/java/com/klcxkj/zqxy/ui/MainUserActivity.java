@@ -134,7 +134,7 @@ public class MainUserActivity extends FragmentActivity {
 				return;
 			}
 
-			loadingDialogProgress = GlobalTools.getInstance().showDailog(MainUserActivity.this,"登录中.");
+			loadingDialogProgress = GlobalTools.getInstance().showDailog(MainUserActivity.this,"登入中.");
 
 			AjaxParams ajaxParams = new AjaxParams();
 			ajaxParams.put("TelPhone", phonenum);
