@@ -71,6 +71,7 @@ public class MainAdminActivity extends FragmentActivity {
 		Intent intent =getIntent();
 		String bPhone =intent.getStringExtra("tellPhone");
 		String prjid =intent.getStringExtra("PrjID");
+		Common.BASE_URL=intent.getStringExtra("app_url");
 		int num =bPhone.length();
 		String tell ="";
 		switch (num){

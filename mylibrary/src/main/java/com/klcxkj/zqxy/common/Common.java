@@ -46,9 +46,9 @@ public class Common {
 
 	// public static final String BASE_URL = "http://106.75.147.104/appI/api/";
 
-	public static final String BASE_URL =///http://106.75.166.86/appI/api/
+	public static  String BASE_URL ="";///http://106.75.166.86/appI/api/
 	//"http://192.168.1.20:8081/klcxkj/appI/api/";
-	URL + "appI/api/";
+	//URL + "appI/api/";
 
 	public static final String USER_IS_FIRST = "user_is_first";
 
