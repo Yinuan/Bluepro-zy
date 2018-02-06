@@ -8,8 +8,8 @@
 		}
 	}
          以及app工程下
-  	dependencies {
-	        compile 'com.github.Yinuan:Bluepro-zy:v1.2'
+  		dependencies {
+	        compile 'com.github.Yinuan:Bluepro-zy:v1.3'
 	}
 
           调用方式：
@@ -18,12 +18,14 @@
                 intent.setClass(MainActivity.this, MainUserActivity.class);
                 intent.putExtra("tellPhone","0078");
                 intent.putExtra("PrjID","0");
+		 intent.putExtra("app_url","http://106.75.164.143/appI/api/");
                 startActivity(intent);
      管理端调用方式：
                Intent intent =new Intent();
                 intent.setClass(MainActivity.this, MainAdminActivity.class);
                 intent.putExtra("tellPhone","18565651403");
                 intent.putExtra("PrjID","0");
+		 intent.putExtra("app_url","http://106.75.164.143/appI/api/");
                 startActivity(intent);
           另外清单文件，需要添加的额外。
    Eclispe  
