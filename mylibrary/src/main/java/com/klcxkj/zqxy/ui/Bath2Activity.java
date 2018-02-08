@@ -12,8 +12,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -1009,6 +1007,9 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
             public void onResponse(Call call, Response response) throws IOException {
                 String result =response.body().string();
                 final PublicGetData publicGetData = new Gson().fromJson(result, PublicGetData.class);
+                if (publicGetData==null){
+                    return;
+                }
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -1321,14 +1322,14 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
 
         if (Common.isNetWorkConnected(Bath2Activity.this)) {
 
-            if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
+           /* if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
                 Common.showToast(Bath2Activity.this, R.string.phonenum_null, Gravity.CENTER);
                 return;
             }
             if (!Common.isPhoneNum(mInfo.TelPhone + "")) {
                 Common.showToast(Bath2Activity.this, R.string.phonenum_not_irregular, Gravity.CENTER);
                 return;
-            }
+            }*/
 
             AjaxParams ajaxParams = new AjaxParams();
             ajaxParams.put("TelPhone", mInfo.TelPhone + "");

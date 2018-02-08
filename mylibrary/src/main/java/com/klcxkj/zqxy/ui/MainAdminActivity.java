@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -110,7 +109,7 @@ public class MainAdminActivity extends FragmentActivity {
 				break;
 		}
 		MyApp.versionCode=MyApp.getLocalVersionName(MainAdminActivity.this);
-		login(tell,prjid,"0");
+		login(bPhone,prjid,"0");
 	}
 
 
@@ -171,14 +170,14 @@ public class MainAdminActivity extends FragmentActivity {
 
 	protected void login(final String phonenum, String prjid, String checkcode) {
 		if (Common.isNetWorkConnected(MainAdminActivity.this)) {
-			if (TextUtils.isEmpty(phonenum)) {
+		/*	if (TextUtils.isEmpty(phonenum)) {
 				Common.showToast(MainAdminActivity.this, R.string.phonenum_null, Gravity.CENTER);
 				return;
-			}
-			if (!Common.isPhoneNum(phonenum)) {
+			}*/
+			/*if (!Common.isPhoneNum(phonenum)) {
 				Common.showToast(MainAdminActivity.this, R.string.phonenum_not_irregular, Gravity.CENTER);
 				return;
-			}
+			}*/
 
 			loadingDialogProgress = GlobalTools.getInstance().showDailog(MainAdminActivity.this,"登入中.");
 			sp = getSharedPreferences("adminInfo", Context.MODE_PRIVATE);

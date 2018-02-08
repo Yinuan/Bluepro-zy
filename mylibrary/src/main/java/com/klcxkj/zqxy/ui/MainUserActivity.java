@@ -120,20 +120,20 @@ public class MainUserActivity extends FragmentActivity {
 				break;
 		}
 		MyApp.versionCode=MyApp.getLocalVersionName(MainUserActivity.this);
-		login(tell,prjid,"0");
+		login(bPhone,prjid,"0");
 	}
 
 
 	protected void login(final String phonenum, String prjid, String checkcode) {
 		if (Common.isNetWorkConnected(MainUserActivity.this)) {
-			if (TextUtils.isEmpty(phonenum)) {
+			/*if (TextUtils.isEmpty(phonenum)) {
 				Common.showToast(MainUserActivity.this, R.string.phonenum_null, Gravity.CENTER);
 				return;
-			}
-			if (!Common.isPhoneNum(phonenum)) {
+			}*/
+			/*if (!Common.isPhoneNum(phonenum)) {
 				Common.showToast(MainUserActivity.this, R.string.phonenum_not_irregular, Gravity.CENTER);
 				return;
-			}
+			}*/
 
 			loadingDialogProgress = GlobalTools.getInstance().showDailog(MainUserActivity.this,"登入中.");
 
@@ -146,7 +146,7 @@ public class MainUserActivity extends FragmentActivity {
 			ajaxParams.put("version", MyApp.versionCode);
 
 			//Log.d("MainUserActivity", "ajaxParams:" + ajaxParams);
-			new FinalHttp().get(Common.BASE_URL + "login", ajaxParams,
+			new FinalHttp().get(Common.BASE_URL + "login2", ajaxParams,
 					new AjaxCallBack<Object>() {
 
 						@Override
@@ -156,7 +156,7 @@ public class MainUserActivity extends FragmentActivity {
 								loadingDialogProgress.dismiss();
 							}
 							String result = t.toString();
-							Log.e("MainUserActivity", "login result = " + result);
+						//	Log.e("MainUserActivity", "login result = " + result);
 							PublicGetData publicGetData = new Gson().fromJson(result, PublicGetData.class);
 							if (publicGetData.error_code.equals("0") || publicGetData.error_code.equals("5")) {
 

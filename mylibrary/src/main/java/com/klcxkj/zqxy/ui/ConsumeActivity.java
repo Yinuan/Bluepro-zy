@@ -3,13 +3,11 @@ package com.klcxkj.zqxy.ui;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.Gravity;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.mylibrary.R;
+import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.zqxy.common.Common;
 import com.klcxkj.zqxy.databean.UserInfo;
 import com.klcxkj.zqxy.response.PublicGetData;
@@ -91,7 +89,7 @@ public class ConsumeActivity extends BaseActivity {
 
 		if (Common.isNetWorkConnected(ConsumeActivity.this)) {
 
-			if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
+			/*if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
 				Common.showToast(ConsumeActivity.this, R.string.phonenum_null, Gravity.CENTER);
 				return;
 			}
@@ -99,7 +97,7 @@ public class ConsumeActivity extends BaseActivity {
 				Common.showToast(ConsumeActivity.this, R.string.phonenum_not_irregular, Gravity.CENTER);
 				return;
 			}
-
+*/
 			AjaxParams ajaxParams = new AjaxParams();
 			ajaxParams.put("TelPhone", mInfo.TelPhone + "");
 			ajaxParams.put("PrjID", mInfo.PrjID + "");

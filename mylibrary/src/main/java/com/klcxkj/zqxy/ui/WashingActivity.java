@@ -12,8 +12,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -29,8 +27,8 @@ import com.example.jooronjar.utils.CMDUtils;
 import com.example.jooronjar.utils.DigitalTrans;
 import com.example.jooronjar.utils.WaterCodeListener;
 import com.google.gson.Gson;
-import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.mylibrary.R;
+import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.zqxy.common.Common;
 import com.klcxkj.zqxy.databean.DeviceInfo;
 import com.klcxkj.zqxy.databean.PostConsumeData;
@@ -941,6 +939,9 @@ public class WashingActivity extends BaseActivity implements WaterCodeListener{
                             String result = t.toString();
                             //Log.d("WashingActivity","下发费率：="+ result);
                             PublicGetData publicGetData = new Gson().fromJson(result, PublicGetData.class);
+                            if (publicGetData==null){
+                                return;
+                            }
                             if (publicGetData.error_code.equals("0")) {
 
 
@@ -1095,14 +1096,14 @@ public class WashingActivity extends BaseActivity implements WaterCodeListener{
 
         if (Common.isNetWorkConnected(WashingActivity.this)) {
 
-            if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
+           /* if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
                 Common.showToast(WashingActivity.this, R.string.phonenum_null, Gravity.CENTER);
                 return;
             }
             if (!Common.isPhoneNum(mInfo.TelPhone + "")) {
                 Common.showToast(WashingActivity.this, R.string.phonenum_not_irregular, Gravity.CENTER);
                 return;
-            }
+            }*/
 
             AjaxParams ajaxParams = new AjaxParams();
             ajaxParams.put("TelPhone", mInfo.TelPhone + "");

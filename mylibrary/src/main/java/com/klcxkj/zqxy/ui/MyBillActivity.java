@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -13,8 +11,8 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jaeger.library.StatusBarUtil;
-import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.mylibrary.R;
+import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.zqxy.adapter.BillAdapter;
 import com.klcxkj.zqxy.common.Common;
 import com.klcxkj.zqxy.databean.BillInfo;
@@ -115,7 +113,7 @@ public class MyBillActivity extends BaseActivity {
 
 		if (Common.isNetWorkConnected(MyBillActivity.this)) {
 
-			if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
+			/*if (TextUtils.isEmpty(mInfo.TelPhone + "")) {
 				Common.showToast(MyBillActivity.this, R.string.phonenum_null, Gravity.CENTER);
 
 				return;
@@ -124,7 +122,7 @@ public class MyBillActivity extends BaseActivity {
 				Common.showToast(MyBillActivity.this, R.string.phonenum_not_irregular, Gravity.CENTER);
 
 				return;
-			}
+			}*/
 
 			loadingDialogProgress = GlobalTools.getInstance().showDailog(this,"加载中.");
 
