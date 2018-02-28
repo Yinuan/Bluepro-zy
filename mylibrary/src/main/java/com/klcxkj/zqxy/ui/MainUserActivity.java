@@ -156,7 +156,7 @@ public class MainUserActivity extends FragmentActivity {
 								loadingDialogProgress.dismiss();
 							}
 							String result = t.toString();
-						//	Log.e("MainUserActivity", "login result = " + result);
+							Log.e("MainUserActivity", "login result = " + result);
 							PublicGetData publicGetData = new Gson().fromJson(result, PublicGetData.class);
 							if (publicGetData.error_code.equals("0") || publicGetData.error_code.equals("5")) {
 

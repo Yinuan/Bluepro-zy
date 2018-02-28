@@ -78,7 +78,7 @@ public class AdminFragment extends BaseFragment implements View.OnClickListener 
 			}
 		});
 		TextView title = (TextView)rootView. findViewById(R.id.menu_title);
-		title.setText(getActivity().getResources().getString(R.string.app_name));
+		title.setText("蓝牙水表");
 		//
 		admin_prjname_txt = (TextView) view.findViewById(R.id.admin_prjname_txt);
 

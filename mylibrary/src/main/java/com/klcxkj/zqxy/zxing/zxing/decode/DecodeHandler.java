@@ -16,9 +16,6 @@
 
 package com.klcxkj.zqxy.zxing.zxing.decode;
 
-import java.io.ByteArrayOutputStream;
-import java.util.Map;
-
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.hardware.Camera.Size;
@@ -36,6 +33,9 @@ import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 import com.klcxkj.mylibrary.R;
 import com.klcxkj.zqxy.zxing.zxing.activity.CaptureActivity;
+
+import java.io.ByteArrayOutputStream;
+import java.util.Map;
 
 public class DecodeHandler extends Handler {
 
@@ -152,8 +152,7 @@ public class DecodeHandler extends Handler {
 	 *            The height of the image.
 	 * @return A PlanarYUVLuminanceSource instance.
 	 */
-	public PlanarYUVLuminanceSource buildLuminanceSource(byte[] data,
-			int width, int height) {
+	public PlanarYUVLuminanceSource buildLuminanceSource(byte[] data, int width, int height) {
 		Rect rect = activity.getCropRect();
 		if (rect == null) {
 			return null;

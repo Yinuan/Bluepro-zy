@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent =new Intent();
                 intent.setClass(MainActivity.this, MainUserActivity.class);
-                intent.putExtra("tellPhone","0078");
+                intent.putExtra("tellPhone","24");
                 intent.putExtra("PrjID","0");
                 intent.putExtra("app_url","http://106.75.164.143/appI/api/");
                 startActivity(intent);

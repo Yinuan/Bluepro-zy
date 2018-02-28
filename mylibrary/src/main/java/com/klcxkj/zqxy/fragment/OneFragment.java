@@ -91,7 +91,7 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
             }
         });
         TextView title = (TextView)rootView. findViewById(R.id.menu_title);
-        title.setText(getActivity().getResources().getString(R.string.app_name));
+        title.setText("蓝牙水表");
 
         //two menu
         one_rechange = (LinearLayout) rootView.findViewById(R.id.one_rechange);
