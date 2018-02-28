@@ -68,7 +68,7 @@ public class AdminFragment extends BaseFragment implements View.OnClickListener 
 		}
 		return rootView;
 	}
-
+	private TextView title;
 	private void initView(View view) {
 		//返回
 		LinearLayout backLayout = (LinearLayout)rootView. findViewById(R.id.top_btn_back);
@@ -78,10 +78,8 @@ public class AdminFragment extends BaseFragment implements View.OnClickListener 
 				getActivity().finish();
 			}
 		});
-		TextView title = (TextView)rootView. findViewById(R.id.menu_title);
-		if (MainAdminActivity.pName !=null){
-			title.setText(MainAdminActivity.pName);
-		}
+		 title = (TextView)rootView. findViewById(R.id.menu_title);
+
 
 		//
 		admin_prjname_txt = (TextView) view.findViewById(R.id.admin_prjname_txt);
@@ -98,6 +96,9 @@ public class AdminFragment extends BaseFragment implements View.OnClickListener 
 	@Subscribe
 	public void onEvent(String msg){
 		if (msg.equals("login_success")){
+			if (MainAdminActivity.pName !=null){
+				title.setText(MainAdminActivity.pName);
+			}
 			sp = getActivity().getSharedPreferences("adminInfo", Context.MODE_PRIVATE);
 			mUserInfo = Common.getUserInfo(sp);
 

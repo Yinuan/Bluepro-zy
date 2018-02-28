@@ -81,7 +81,7 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
     }
 
 
-
+    private TextView title;
     private void initview(View rootView) {
         //
 
@@ -92,10 +92,8 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
                getActivity().finish();
             }
         });
-         TextView title = (TextView)rootView. findViewById(R.id.menu_title);
-        if (MainUserActivity.pName !=null){
-            title.setText(MainUserActivity.pName);
-        }
+          title = (TextView)rootView. findViewById(R.id.menu_title);
+
 
 
         //two menu
@@ -124,6 +122,9 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
     @Subscribe
    public void onEvent(String msg){
        if (msg.equals("login_success")){
+           if (MainUserActivity.pName !=null){
+               title.setText(MainUserActivity.pName);
+           }
            one_xizao.setOnClickListener(this);
            one_xiyi.setOnClickListener(this);
            one_yinshui.setOnClickListener(this);
