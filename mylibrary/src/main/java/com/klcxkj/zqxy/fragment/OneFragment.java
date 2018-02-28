@@ -14,6 +14,7 @@ import com.klcxkj.mylibrary.R;
 import com.klcxkj.zqxy.adapter.OneNewsListAdapter;
 import com.klcxkj.zqxy.databean.MsgQuerySpread;
 import com.klcxkj.zqxy.ui.BathChoseActivity;
+import com.klcxkj.zqxy.ui.MainUserActivity;
 import com.klcxkj.zqxy.ui.MessageCenterActivity;
 import com.klcxkj.zqxy.ui.MyBillActivity;
 import com.klcxkj.zqxy.ui.PushMessageCenter;
@@ -80,6 +81,7 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
     }
 
 
+
     private void initview(View rootView) {
         //
 
@@ -90,8 +92,11 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
                getActivity().finish();
             }
         });
-        TextView title = (TextView)rootView. findViewById(R.id.menu_title);
-        title.setText("蓝牙水表");
+         TextView title = (TextView)rootView. findViewById(R.id.menu_title);
+        if (MainUserActivity.pName !=null){
+            title.setText(MainUserActivity.pName);
+        }
+
 
         //two menu
         one_rechange = (LinearLayout) rootView.findViewById(R.id.one_rechange);
@@ -148,9 +153,12 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
             startActivity(intent);
 
         } else if (i == R.id.one_chuifengji) {
-            intent = new Intent(getActivity(), CaptureActivity.class);
+           intent = new Intent(getActivity(), CaptureActivity.class);
             intent.putExtra("capture_type", CaptureActivity.CAPTURE_DRYER);
             startActivity(intent);
+
+
+            //ScannerActivity.gotoActivity(getActivity(), true, 0, 0, false, false, false);
 
         } else if (i == R.id.one_chongdian) {
             intent = new Intent(getActivity(), CaptureActivity.class);

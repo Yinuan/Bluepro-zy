@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.klcxkj.mylibrary.R;
 import com.klcxkj.zqxy.common.Common;
 import com.klcxkj.zqxy.databean.UserInfo;
+import com.klcxkj.zqxy.ui.MainAdminActivity;
 import com.klcxkj.zqxy.ui.SearchAdminDeviceActivity;
 import com.klcxkj.zqxy.widget.Effectstype;
 import com.klcxkj.zqxy.zxing.zxing.activity.CaptureActivity;
@@ -78,7 +79,10 @@ public class AdminFragment extends BaseFragment implements View.OnClickListener 
 			}
 		});
 		TextView title = (TextView)rootView. findViewById(R.id.menu_title);
-		title.setText("蓝牙水表");
+		if (MainAdminActivity.pName !=null){
+			title.setText(MainAdminActivity.pName);
+		}
+
 		//
 		admin_prjname_txt = (TextView) view.findViewById(R.id.admin_prjname_txt);
 

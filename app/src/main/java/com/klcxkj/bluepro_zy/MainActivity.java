@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("tellPhone","24");
                 intent.putExtra("PrjID","0");
                 intent.putExtra("app_url","http://106.75.164.143/appI/api/");
+                intent.putExtra("prijName","蓝牙项目");
                 startActivity(intent);
             }
         });
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("tellPhone","18565651403");
                 intent.putExtra("PrjID","0");
                 intent.putExtra("app_url","http://106.75.164.143/appI/api/");
+                intent.putExtra("prijName","蓝牙项目");
                 startActivity(intent);
             }
         });
