@@ -1294,7 +1294,7 @@ public class DeviceRegisterActivity extends BaseActivity implements OnWaterAdmin
 
 			}else if (typeSize==23){ //旧的
 
-				if (typeDecive ==0  || typeDecive==1){
+				if (typeDecive ==0  || typeDecive==1|| typeDecive==3){
 					//清除，下发
                    // CMDUtils.qingchushebei(mbtService,true);
 					if (deciveExit==101){ //进入水表替换接口
@@ -1303,7 +1303,7 @@ public class DeviceRegisterActivity extends BaseActivity implements OnWaterAdmin
 						deciveRegister();
 					}
 				}else {
-					toast("登记失败,旧设备不能登记为"+str+",请重新登记!");
+					toast("登记失败,此设备不能登记为"+str+",请重新登记!");
                     stopProgressDialog();
 				}
 

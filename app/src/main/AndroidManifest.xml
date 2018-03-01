@@ -236,38 +236,6 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
 
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.ScannerActivity"
-            android:label="扫一扫">
-            <intent-filter>
-                <action android:name="com.mylhyl.zxing.scanner.client.android.SCAN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.OptionsScannerActivity"
-            android:label="扫一扫" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.result.UriActivity"
-            android:label="uri" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.result.AddressBookActivity"
-            android:label="addressBook" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.result.TextActivity"
-            android:label="text" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.picture.PickPictureTotalActivity"
-            android:label="选择相册" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.picture.PickPictureActivity"
-            android:label="照片" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.DeCodeActivity"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name="com.klcxkj.zqxy.zxing.result.BarcodeActivity"
-            android:label="barcode" />
     </application>
 
 </manifest>

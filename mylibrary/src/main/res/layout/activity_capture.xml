@@ -1,84 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
-    android:orientation="vertical" >
-    
-    <SurfaceView
-        android:id="@+id/capture_preview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <RelativeLayout
-        android:id="@+id/capture_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <ImageView
-            android:id="@+id/capture_mask_top"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/capture_crop_view"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/shadow" />
-
-        <RelativeLayout
-            android:id="@+id/capture_crop_view"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/qr_code_bg" >
-
-            <ImageView
-                android:id="@+id/capture_scan_line"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/scan_line" />
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/capture_mask_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@id/capture_crop_view"
-            android:background="@drawable/shadow" />
-
-        <ImageView
-            android:id="@+id/capture_mask_left"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_above="@id/capture_mask_bottom"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/capture_mask_top"
-            android:layout_toLeftOf="@id/capture_crop_view"
-            android:background="@drawable/shadow" />
-
-        <ImageView
-            android:id="@+id/capture_mask_right"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_above="@id/capture_mask_bottom"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/capture_mask_top"
-            android:layout_toRightOf="@id/capture_crop_view"
-            android:background="@drawable/shadow" />
-
-        <ImageView
-            android:id="@+id/flash_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@id/capture_crop_view"
-            android:layout_centerHorizontal="true"
-            android:padding="10dp"
-            android:src="@drawable/flash_selecter" />
-    </RelativeLayout>
-
+    android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/title_layout"
         android:layout_width="match_parent"
@@ -106,7 +31,7 @@
             android:text="@string/scan_qrcode"
             android:textColor="@color/white"
             android:textSize="@dimen/title_text_size" />
-        
+
         <TextView
             android:visibility="gone"
             android:id="@+id/device_list_txt"
@@ -120,7 +45,61 @@
             android:text="@string/device_list"
             android:textColor="@color/white"
             android:textSize="@dimen/title_back_text_size" />
-        
+
     </RelativeLayout>
-    
-</RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.klcxkj.jxing.ScannerView
+                android:id="@+id/capture_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/flash_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="36dp"
+                android:padding="10dp"
+                android:src="@drawable/flash_selecter" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/decode_show_deal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_margin="2dp"
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+               android:layout_above="@+id/decode_show_txt"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:indeterminateDrawable="@drawable/loading_progress_bg"
+              >
+            </ProgressBar>
+            <TextView
+                android:id="@+id/decode_show_txt"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="正在处理.."/>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

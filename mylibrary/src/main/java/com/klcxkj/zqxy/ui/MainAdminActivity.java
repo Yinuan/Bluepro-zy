@@ -55,7 +55,7 @@ public class MainAdminActivity extends FragmentActivity {
 	protected NiftyDialogBuilder dialogBuilder;
 	private String isOpUser ="1";
 	private SharedPreferences sp;
-	public static String pName ="蓝牙设备";
+	public static String pName ="";
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -71,7 +71,6 @@ public class MainAdminActivity extends FragmentActivity {
 		String bPhone =intent.getStringExtra("tellPhone");
 		String prjid =intent.getStringExtra("PrjID");
 		Common.BASE_URL=intent.getStringExtra("app_url");
-		pName =intent.getStringExtra("prijName");
 		int num =bPhone.length();
 		String tell ="";
 		switch (num){

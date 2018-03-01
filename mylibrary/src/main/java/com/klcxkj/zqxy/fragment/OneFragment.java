@@ -124,6 +124,8 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
        if (msg.equals("login_success")){
            if (MainUserActivity.pName !=null){
                title.setText(MainUserActivity.pName);
+           }else {
+               title.setText("蓝牙项目");
            }
            one_xizao.setOnClickListener(this);
            one_xiyi.setOnClickListener(this);
@@ -159,7 +161,6 @@ public class OneFragment extends BaseFragment implements View.OnClickListener{
             startActivity(intent);
 
 
-            //ScannerActivity.gotoActivity(getActivity(), true, 0, 0, false, false, false);
 
         } else if (i == R.id.one_chongdian) {
             intent = new Intent(getActivity(), CaptureActivity.class);

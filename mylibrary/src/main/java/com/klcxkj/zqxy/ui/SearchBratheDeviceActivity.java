@@ -595,7 +595,7 @@ public class SearchBratheDeviceActivity extends BaseActivity {
 				.post(requestBody)
 				.tag(tag)
 				.build();
-
+		Log.d("SearchBratheDeviceActiv", "userInfo.PrjID:" + userInfo.PrjID);
 		client.newCall(request).enqueue(new Callback() {
 			@Override
 			public void onFailure(Call call, IOException e) {
@@ -606,7 +606,7 @@ public class SearchBratheDeviceActivity extends BaseActivity {
 			public void onResponse(Call call, Response response) throws IOException {
 				final String result =response.body().string();
 				call.cancel();
-
+				Log.d("SearchBratheDeviceActiv", result);
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {

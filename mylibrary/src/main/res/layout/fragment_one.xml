@@ -66,7 +66,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
+        android:paddingBottom="20dp"
         android:paddingTop="10dp"
         android:background="@color/white"
         android:orientation="vertical">
@@ -182,11 +182,11 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="14dp"
         android:id="@+id/my_bill_layout"
         android:layout_width="match_parent"
         android:background="@color/white"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp" >
         <ImageView
@@ -209,6 +209,7 @@
         <ImageView
             android:layout_width="10dp"
             android:layout_height="20dp"
+            android:visibility="gone"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:src="@drawable/my_item_next" >

@@ -98,6 +98,8 @@ public class AdminFragment extends BaseFragment implements View.OnClickListener 
 		if (msg.equals("login_success")){
 			if (MainAdminActivity.pName !=null){
 				title.setText(MainAdminActivity.pName);
+			}else {
+				title.setText("蓝牙项目");
 			}
 			sp = getActivity().getSharedPreferences("adminInfo", Context.MODE_PRIVATE);
 			mUserInfo = Common.getUserInfo(sp);

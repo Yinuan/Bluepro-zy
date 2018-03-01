@@ -20,10 +20,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent =new Intent();
                 intent.setClass(MainActivity.this, MainUserActivity.class);
-                intent.putExtra("tellPhone","24");
+                intent.putExtra("tellPhone","18565651403");
                 intent.putExtra("PrjID","0");
-                intent.putExtra("app_url","http://106.75.164.143/appI/api/");
-                intent.putExtra("prijName","蓝牙项目");
+                intent.putExtra("app_url","http://106.75.164.143:8085/appI/api/");
                 startActivity(intent);
             }
         });
@@ -35,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this, MainAdminActivity.class);
                 intent.putExtra("tellPhone","18565651403");
                 intent.putExtra("PrjID","0");
-                intent.putExtra("app_url","http://106.75.164.143/appI/api/");
-                intent.putExtra("prijName","蓝牙项目");
+                intent.putExtra("app_url","http://106.75.164.143:8085/appI/api/");
                 startActivity(intent);
             }
         });

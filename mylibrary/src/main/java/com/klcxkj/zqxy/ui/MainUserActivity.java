@@ -68,7 +68,7 @@ public class MainUserActivity extends FragmentActivity {
 	private String isOpUser ="0";
 	private SharedPreferences sp;
 
-	public static String pName ="蓝牙设备";
+	public static String pName ="蓝牙项目";
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_tab_layout);
@@ -82,7 +82,6 @@ public class MainUserActivity extends FragmentActivity {
 		Intent intent =getIntent();
 		String bPhone =intent.getStringExtra("tellPhone");
 		String prjid =intent.getStringExtra("PrjID");
-		pName =intent.getStringExtra("prijName");
 		Common.BASE_URL=intent.getStringExtra("app_url");
 		int num =bPhone.length();
 		String tell ="";
