@@ -12,6 +12,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -29,10 +30,9 @@ import com.klcxkj.mylibrary.R;
 import com.klcxkj.zqxy.MyApp;
 import com.klcxkj.zqxy.common.Common;
 import com.klcxkj.zqxy.databean.DeviceInfo;
+import com.klcxkj.zqxy.databean.PerBean;
 import com.klcxkj.zqxy.databean.PostConsumeData;
 import com.klcxkj.zqxy.databean.UserInfo;
-import com.klcxkj.zqxy.databean.WashingPerMonneyBean;
-import com.klcxkj.zqxy.databean.WashingPerMonneyResult;
 import com.klcxkj.zqxy.response.PublicGetData;
 import com.klcxkj.zqxy.response.PublicPostConsumeData;
 import com.klcxkj.zqxy.widget.Effectstype;
@@ -1394,25 +1394,28 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
     private void queryMdelByMac(){
 
         AjaxParams params =new AjaxParams();
-        params.put("DevMac",mDeviceInfo.devMac);
+        params.put("AccID",userInfo.AccID+"");
         params.put("PrjID",""+mDeviceInfo.PrjID);
         params.put("loginCode",userInfo.TelPhone+","+userInfo.loginCode);
         params.put("phoneSystem", "Android");
         params.put("version", MyApp.versionCode);
       //  Log.d("WashingActivity", "params:" + params);
-        new FinalHttp().get(Common.BASE_URL + "getOrderByMac", params, new AjaxCallBack<Object>() {
+        new FinalHttp().get(Common.BASE_URL + "priinfo", params, new AjaxCallBack<Object>() {
             @Override
             public void onSuccess(Object result) {
                 super.onSuccess(result);
-             //   Log.d("----------", "result:" + result);
-
-                WashingPerMonneyResult perMonneyResult =new Gson().fromJson(result.toString(),WashingPerMonneyResult.class);
+                Log.d("----------", "result:" + result);
+                PerBean perBean =new Gson().fromJson(result.toString(),PerBean.class);
+                if (perBean !=null){
+                    decivePerMonney.setText(perBean.getData().getPrjYKMoney()+"0元");
+                }
+                /*WashingPerMonneyResult perMonneyResult =new Gson().fromJson(result.toString(),WashingPerMonneyResult.class);
                 if (perMonneyResult.getError_code().equals("0")){
                     WashingPerMonneyBean monneyBean =perMonneyResult.getData();
                     if (monneyBean!=null){
                         decivePerMonney.setText(Common.getShowMonty(Integer.parseInt(monneyBean.getPerMoney()), getString(R.string.yuan1))); //预扣费
                     }
-                }
+                }*/
             }
 
             @Override
