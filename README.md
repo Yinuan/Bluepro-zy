@@ -15,7 +15,7 @@
 	        compile 'com.github.Yinuan:Bluepro-zy:v1.3'
 	}
 
-      调用方式：
+  调用方式：
     
      findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +42,7 @@
                 startActivity(intent);
             }
         });
-       另外清单文件，需要添加的额外。
+   另外清单文件，需要添加的额外。
    Eclispe  
    	![](https://github.com/Yinuan/Bluepro-zy/blob/master/mylibrary/src/main/res/mipmap-hdpi/go_home.png)
 
