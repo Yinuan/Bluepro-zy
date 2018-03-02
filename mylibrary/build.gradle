@@ -49,5 +49,5 @@ dependencies {
     compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
     compile 'org.sufficientlysecure:html-textview:3.5'
     compile 'com.zzhoujay.richtext:richtext:3.0.4'
-    compile 'com.github.Yinuan:Zxing-js:v1.1'
+    compile 'com.github.Yinuan:Zxing-js:v1.3'
 }

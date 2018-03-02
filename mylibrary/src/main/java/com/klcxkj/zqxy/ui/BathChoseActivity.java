@@ -179,6 +179,10 @@ public class BathChoseActivity extends BaseActivity {
                            ArrayList<DeviceInfo> deviceInfos = new Gson().fromJson(publicArrayData.data, listType);
                            if (deviceInfos !=null && deviceInfos.size()>0){
                                DeviceInfo deviceInfo =deviceInfos.get(0);
+                               if (deviceInfo.Dsbtypeid!=4){ //不是热水表了
+                                    toast("该设备信息已修改，请重新绑定绑定");
+                                   return;
+                               }
                                SharedPreferences.Editor editor = sp.edit();
                                editor.putString(Common.USER_BRATHE + Common.getUserPhone(sp), new Gson().toJson(deviceInfo));
                                editor.commit();
