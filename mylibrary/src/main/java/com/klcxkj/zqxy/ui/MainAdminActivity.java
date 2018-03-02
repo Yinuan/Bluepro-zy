@@ -71,6 +71,7 @@ public class MainAdminActivity extends FragmentActivity {
 		String bPhone =intent.getStringExtra("tellPhone");
 		String prjid =intent.getStringExtra("PrjID");
 		Common.BASE_URL=intent.getStringExtra("app_url");
+		pName=intent.getStringExtra("prijName");
 		int num =bPhone.length();
 		String tell ="";
 		switch (num){
@@ -232,7 +233,6 @@ public class MainAdminActivity extends FragmentActivity {
 								}
 								editor.putString(Common.USER_INFO, new Gson().toJson(userInfo));
 								editor.commit();
-								pName=userInfo.PrjName;
 								EventBus.getDefault().postSticky("login_success");
 							} else if (publicGetData.error_code.equals("3")) {
 								Common.showToast(MainAdminActivity.this, R.string.yanzhengma_error, Gravity.CENTER);

@@ -68,7 +68,7 @@ public class MainUserActivity extends FragmentActivity {
 	private String isOpUser ="0";
 	private SharedPreferences sp;
 
-	public static String pName ="蓝牙项目";
+	public static String pName ="";
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_tab_layout);
@@ -83,6 +83,7 @@ public class MainUserActivity extends FragmentActivity {
 		String bPhone =intent.getStringExtra("tellPhone");
 		String prjid =intent.getStringExtra("PrjID");
 		Common.BASE_URL=intent.getStringExtra("app_url");
+		pName=intent.getStringExtra("prijName");
 		int num =bPhone.length();
 		String tell ="";
 		switch (num){
@@ -187,7 +188,7 @@ public class MainUserActivity extends FragmentActivity {
 								}
 								editor.putString(Common.USER_INFO, new Gson().toJson(userInfo));
 								editor.commit();
-								pName=userInfo.PrjName;
+
 								EventBus.getDefault().postSticky("login_success");
 							} else if (publicGetData.error_code.equals("3")) {
 								Common.showToast(MainUserActivity.this, R.string.yanzhengma_error, Gravity.CENTER);
