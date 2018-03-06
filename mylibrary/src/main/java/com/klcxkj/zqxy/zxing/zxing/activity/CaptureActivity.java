@@ -15,11 +15,15 @@
  */
 package com.klcxkj.zqxy.zxing.zxing.activity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -122,8 +126,18 @@ public  class CaptureActivity extends BaseActivity implements OnScannerCompletio
             }
         });
 
+        //权限配置
+        setAdmin();
 
     }
+
+    private void setAdmin() {
+        if (ContextCompat.checkSelfPermission(CaptureActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            //权限还没有授予，需要在这里写申请权限的代码
+            ActivityCompat.requestPermissions(CaptureActivity.this, new String[]{Manifest.permission.CAMERA}, 60);
+        }
+    }
+
     // 是否开启闪光灯
     private void openLight() {
         switch (ifOpenLight % 2) {
@@ -150,6 +164,8 @@ public  class CaptureActivity extends BaseActivity implements OnScannerCompletio
     private void hidepro(){
         proshow.setVisibility(View.GONE);
     }
+
+
 
     private void setdecode() {
         mScannerView = (ScannerView) findViewById(R.id.capture_preview);

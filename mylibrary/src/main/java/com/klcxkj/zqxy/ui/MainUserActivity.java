@@ -400,7 +400,7 @@ public class MainUserActivity extends FragmentActivity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		DownloadApk.unregisterBroadcast(this);
+
 		SharedPreferences.Editor editor = sp.edit();
 		editor.remove(Common.USER_PHONE_NUM);
 		editor.remove(Common.USER_INFO);
