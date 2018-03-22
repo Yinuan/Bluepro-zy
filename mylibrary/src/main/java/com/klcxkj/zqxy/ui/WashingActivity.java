@@ -1387,11 +1387,15 @@ public class WashingActivity extends BaseActivity implements WaterCodeListener{
         wmacBuffer =macBuffer;
         wtac_timeBuffer =tac_timeBuffer;
         wtype=macType+"&"+lType;
+        Toast.makeText(WashingActivity.this, "设备ID" + mdeviceid + " 项目ID" + mproductid + " 设备类型" + lType, Toast.LENGTH_SHORT).show();
 
         if (!b){
             Toast.makeText(this, "查询设备失败,请稍后重试", Toast.LENGTH_SHORT).show();
+        }else {
+            return;
         }
-        if (mdeviceid !=mDeviceInfo.DevID){
+
+       /* if (mdeviceid !=mDeviceInfo.DevID){
             if (mbtService.getState()==BluetoothService.STATE_CONNECTED){
                 mbtService.stop();
             }
@@ -1404,7 +1408,7 @@ public class WashingActivity extends BaseActivity implements WaterCodeListener{
                   break;
           }
             return;
-        }
+        }*/
         if (mUserInfo.GroupID==2){
             if (mproductid==0){
                 if (mbtService.getState()==BluetoothService.STATE_CONNECTED){

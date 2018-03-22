@@ -201,7 +201,7 @@ public class MainUserActivity extends FragmentActivity {
 						@Override
 						public void onFailure(Throwable t, int errorNo, String strMsg) {
 							super.onFailure(t, errorNo, strMsg);
-
+							Log.d("MainUserActivity", strMsg);
 							Toast.makeText(MainUserActivity.this, "登录失败,请稍后重试", Toast.LENGTH_SHORT).show();
 							if (loadingDialogProgress !=null){
 								loadingDialogProgress.dismiss();
