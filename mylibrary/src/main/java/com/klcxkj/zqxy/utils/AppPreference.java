@@ -252,11 +252,13 @@ public class AppPreference {
     public void saveMyNameSexIdCard(IDCardData idCardData){
         if (mCfgPreference != null) {
             SharedPreferences.Editor localEditor = mCfgPreference.edit();
+            Gson gson = new Gson();
             try {
-                Gson gson = new Gson();
+
                 localEditor.putString("saveMyNameSexIdCard", SimpleCrypto.encrypt(SEED, gson.toJson(idCardData)));
             } catch (Exception e) {
                 e.printStackTrace();
+                localEditor.putString("saveMyNameSexIdCard", gson.toJson(idCardData));
             }
             localEditor.commit();
         }
@@ -333,13 +335,15 @@ public class AppPreference {
     public MsgQueryList getMessage(){
         if (mCfgPreference != null) {
             String encyptPhone = mCfgPreference.getString("querySpread", "");
+            Gson gson = new Gson();
             if(!StringUtils.isEmpty(encyptPhone))
                 try {
                     String json = SimpleCrypto.decrypt(SEED, encyptPhone);
-                    Gson gson = new Gson();
+
                     return gson.fromJson(json, MsgQueryList.class);
                 } catch (Exception e) {
                     e.printStackTrace();
+                    return gson.fromJson(encyptPhone, MsgQueryList.class);
                 }
         }
         return null;
@@ -358,6 +362,7 @@ public class AppPreference {
                     return json;
                 } catch (Exception e) {
                     e.printStackTrace();
+                    return passWord;
                 }
         }
         return null;
@@ -373,6 +378,7 @@ public class AppPreference {
                 localEditor.putString("time_old", SimpleCrypto.encrypt(SEED, info));
             } catch (Exception e) {
                 e.printStackTrace();
+                localEditor.putString("time_old", info);
             }
             localEditor.commit();
         }
@@ -425,6 +431,43 @@ public class AppPreference {
     }
 
 
+
+    /**
+     * 获取服务器地址
+     * @param
+     * @return
+     */
+    public String getZyIp(){
+        if (mCfgPreference != null) {
+            String passWord = mCfgPreference.getString("zy_ip", "");
+            if(!StringUtils.isEmpty(passWord))
+                try {
+                    String json = SimpleCrypto.decrypt(SEED, passWord);
+                    return json;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return passWord;
+                }
+        }
+        return null;
+    }
+    /**
+     * 保存服务器地址
+     * @param info
+     */
+    public void saveZyIp(String info){
+        if (mCfgPreference != null) {
+            SharedPreferences.Editor localEditor = mCfgPreference.edit();
+            try {
+                localEditor.putString("zy_ip", SimpleCrypto.encrypt(SEED, info));
+            } catch (Exception e) {
+                e.printStackTrace();
+                localEditor.putString("zy_ip", info);
+            }
+            localEditor.commit();
+        }
+    }
+
     /**
      * 清除设备绑定信息
      */
@@ -436,6 +479,11 @@ public class AppPreference {
             localEditor.commit();
         }
     }
+
+
+
+
+
 
     /**
      * 清除首页消息缓存

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -189,7 +190,6 @@ public class MainAdminActivity extends FragmentActivity {
 			ajaxParams.put("isOpUser",isOpUser);
 			ajaxParams.put("phoneSystem", "Android");
 			ajaxParams.put("version", MyApp.versionCode);
-		//	Log.d("MainAdminActivity", "ajaxParams:" + ajaxParams);
 			new FinalHttp().get(Common.BASE_URL + "login2", ajaxParams,
 					new AjaxCallBack<Object>() {
 
@@ -200,7 +200,6 @@ public class MainAdminActivity extends FragmentActivity {
 								loadingDialogProgress.dismiss();
 							}
 							String result = t.toString();
-						//	Log.e("MainAdminActivity", "login result = " + result);
 							PublicGetData publicGetData = new Gson().fromJson(result, PublicGetData.class);
 							if (publicGetData.error_code.equals("0") || publicGetData.error_code.equals("5")) {
 
@@ -234,6 +233,8 @@ public class MainAdminActivity extends FragmentActivity {
 								editor.putString(Common.USER_INFO, new Gson().toJson(userInfo));
 								editor.commit();
 								EventBus.getDefault().postSticky("login_success");
+
+
 							} else if (publicGetData.error_code.equals("3")) {
 								Common.showToast(MainAdminActivity.this, R.string.yanzhengma_error, Gravity.CENTER);
 							} else {

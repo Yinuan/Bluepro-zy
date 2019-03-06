@@ -35,6 +35,7 @@ import com.klcxkj.zqxy.databean.PostConsumeData;
 import com.klcxkj.zqxy.databean.UserInfo;
 import com.klcxkj.zqxy.response.PublicGetData;
 import com.klcxkj.zqxy.response.PublicPostConsumeData;
+import com.klcxkj.zqxy.utils.MD5Util;
 import com.klcxkj.zqxy.widget.Effectstype;
 import com.klcxkj.zqxy.zxing.zxing.activity.CaptureActivity;
 
@@ -46,6 +47,8 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -938,7 +941,9 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
         if (dialogBuilder==null){
             return;
         }
-        dialogBuilder.withTitle(getString(R.string.tips)).withMessage(message)
+        dialogBuilder
+                .withTitle(getString(R.string.tips))
+                .withMessage(message)
                 .withEffect(Effectstype.Fadein).isCancelable(false)
                 .withButton2Text(getString(R.string.i_known))
                 .setButton2Click(new View.OnClickListener() {
@@ -980,7 +985,14 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
-
+        HashMap<String,String> map =new HashMap<String, String>();
+        map.put("AccID",userInfo.AccID+"");
+        map.put("DevID",mdeviceid+"");
+        map.put("GroupID",userInfo.GroupID+"");
+        map.put("PrjID",mproductid+"");
+        map.put("consumeMothe",0+"");
+        map.put("xfMothe",0+"");
+        String sign = MD5Util.getAppSignByMap(map);
         RequestBody requestBody=new FormBody.Builder()
                 .add("PrjID",""+mproductid)
                 .add("AccID",""+ userInfo.AccID )
@@ -988,6 +1000,8 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
                 .add("DevID",mdeviceid+"")
                 .add("consumeMothe","0")
                 .add("xfMothe","0")
+                .add("accNum",MyApp.accNum)
+                .add("signature",sign)
                 .add("loginCode",userInfo.TelPhone+","+userInfo.loginCode)
                 .add("phoneSystem", "Android")
                 .add("version", MyApp.versionCode)
@@ -1131,7 +1145,11 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
-
+        Map<String,String> map =new HashMap<>();
+        map.put("AccID",accoutid+"");
+        map.put("ConsumeDT","20" + timeid);
+        map.put("PerMoney",""+preMoney);
+        map.put("UpMoney",consumeMoney+"");
         RequestBody requestBody=new FormBody.Builder()
                 .add("PrjID",""+prjid)
                 .add("AccID",""+accoutid)
@@ -1141,6 +1159,7 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
                 .add("PerMoney",""+preMoney)
                 .add("ConsumeDT","20" + timeid)
                 .add("devType",mDeviceInfo.Dsbtypeid+"")
+                .add("signature",MD5Util.getAppSignByMap(map))
                 .add("loginCode",userInfo.TelPhone + "," + userInfo.loginCode)
                 .add("phoneSystem", "Android")
                 .add("version",MyApp.versionCode)
@@ -1253,7 +1272,11 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
                 .writeTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
-
+        Map<String,String> map =new HashMap<>();
+        map.put("AccID",userInfo.AccID+"");
+        map.put("ConsumeDT", downRateInfo.ConsumeDT);
+        map.put("PerMoney",""+postConsumeData.downRateInfo.PerMoney);
+        map.put("UpMoney","0");
         RequestBody requestBody=new FormBody.Builder()
                 .add("PrjID",""+ postConsumeData.productid )
                 .add("AccID",""+acc )
@@ -1267,9 +1290,7 @@ public class Bath2Activity extends BaseActivity implements WaterCodeListener {
                 .add("phoneSystem", "Android")
                 .add("version",MyApp.versionCode)
                 .build();
-       // Log.d("Bath2Activity", postConsumeData.downRateInfo.ConsumeDT);
-      //  Log.d("Bath2Activity", downRateInfo.ConsumeDT);
-      //  Log.d("-------", "上传acc:" + acc);
+
         Request request =new Request.Builder()
                 .url(Common.BASE_URL + "savexf")
                 .post(requestBody)

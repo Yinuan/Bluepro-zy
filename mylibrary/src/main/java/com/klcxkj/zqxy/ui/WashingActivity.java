@@ -925,6 +925,7 @@ public class WashingActivity extends BaseActivity implements WaterCodeListener{
             ajaxParams.put("GroupID", mUserInfo.GroupID + "");
             ajaxParams.put("DevID", mdeviceid + "");
             ajaxParams.put("consumeMothe", "1");
+            ajaxParams.put("accNum",MyApp.accNum);
             ajaxParams.put("xfMothe", washingModelInfo.getTypeid()+"");
             ajaxParams.put("loginCode",mUserInfo.TelPhone+","+mUserInfo.loginCode);
             ajaxParams.put("phoneSystem", "Android");

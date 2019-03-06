@@ -8,6 +8,10 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 public class MD5Util {
 	/**
@@ -153,5 +157,33 @@ public class MD5Util {
              e.printStackTrace();  
              return null;  
          }  
-       }  
+       }
+
+	//上传消费数据，下发费率加签
+	public static String getAppSignByMap(Map<String, String> paramMap)
+	{
+		List<String> paramNames = new ArrayList(paramMap.keySet());
+		Collections.sort(paramNames);
+
+		StringBuffer sb = new StringBuffer();
+		for (String paramName : paramNames)
+		{
+			sb.append(paramName);
+			if (paramMap.get(paramName) != null) {
+				sb.append((String)paramMap.get(paramName));
+			}
+		}
+		sb.append("sign-kailu=");//sign-kailu=
+		String reSign = null;
+		try
+		{
+			reSign = MD5Util.getMd5(sb.toString().trim());
+		}
+		catch (Exception e)
+		{
+
+		}
+		return reSign;
+	}
+
 }

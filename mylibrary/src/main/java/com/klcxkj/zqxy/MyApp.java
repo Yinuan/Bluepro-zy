@@ -16,6 +16,7 @@ public class MyApp {
     public static String versionCode;
     public static int checkCode =-11; //租赁设备判断
     public static String washingDecivename ="洗衣机";
+    public static  String accNum ="";
 
     /**
      * 获取本地软件版本号名称
@@ -31,6 +32,6 @@ public class MyApp {
             e.printStackTrace();
         }
         String verCode =localVersion.substring(1,localVersion.length());
-        return verCode;
+        return "1.3.1";
     }
 }

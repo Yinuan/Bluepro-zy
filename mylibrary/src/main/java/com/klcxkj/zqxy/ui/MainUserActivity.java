@@ -84,6 +84,7 @@ public class MainUserActivity extends FragmentActivity {
 		String prjid =intent.getStringExtra("PrjID");
 		Common.BASE_URL=intent.getStringExtra("app_url");
 		pName=intent.getStringExtra("prijName");
+		MyApp.accNum=intent.getStringExtra("accNum");
 		int num =bPhone.length();
 		String tell ="";
 		switch (num){
@@ -145,7 +146,6 @@ public class MainUserActivity extends FragmentActivity {
 			ajaxParams.put("phoneSystem", "Android");
 			ajaxParams.put("version", MyApp.versionCode);
 
-			//Log.d("MainUserActivity", "ajaxParams:" + ajaxParams);
 			new FinalHttp().get(Common.BASE_URL + "login2", ajaxParams,
 					new AjaxCallBack<Object>() {
 
@@ -156,7 +156,6 @@ public class MainUserActivity extends FragmentActivity {
 								loadingDialogProgress.dismiss();
 							}
 							String result = t.toString();
-							Log.e("MainUserActivity", "login result = " + result);
 							PublicGetData publicGetData = new Gson().fromJson(result, PublicGetData.class);
 							if (publicGetData.error_code.equals("0") || publicGetData.error_code.equals("5")) {
 
@@ -201,7 +200,6 @@ public class MainUserActivity extends FragmentActivity {
 						@Override
 						public void onFailure(Throwable t, int errorNo, String strMsg) {
 							super.onFailure(t, errorNo, strMsg);
-							Log.d("MainUserActivity", strMsg);
 							Toast.makeText(MainUserActivity.this, "登录失败,请稍后重试", Toast.LENGTH_SHORT).show();
 							if (loadingDialogProgress !=null){
 								loadingDialogProgress.dismiss();
